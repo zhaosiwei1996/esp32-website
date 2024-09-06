@@ -8,4 +8,4 @@
 
 发送下行数据控制设备led灯开关
 
-通讯协议:emqx的websocket
+通信协议:emqx的websocket
