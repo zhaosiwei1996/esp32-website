@@ -6,25 +6,42 @@
     <title>Temperature Monitor</title>
     <!-- 引入 Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 调整按钮间距以适应移动设备 */
+        .btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        /* 适配小屏幕的文字大小 */
+        h1, h3 {
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Get Temperature and Humidity</h1>
+    <div class="container mt-3">
+        <h1 class="mb-3 text-center">Get Temperature and Humidity</h1>
+
+        <!-- 显示消息列表 -->
         <div class="mb-3">
             <h3>Messages:</h3>
             <div id="messages" class="list-group"></div>
         </div>
-    
+
+        <!-- 显示 LED 状态 -->
         <div class="mb-3">
             <h3>LED Control Status:</h3>
             <div id="ledStatus" class="alert alert-secondary"></div>
         </div>
-        <div class="mt-4">
+
+        <!-- 控制 LED 的按钮 -->
+        <div class="mt-4 text-center">
             <h3>Control LED:</h3>
-            <button id="ledOnButton" class="btn btn-success mr-2">Turn On LED</button>
+            <button id="ledOnButton" class="btn btn-success">Turn On LED</button>
             <button id="ledOffButton" class="btn btn-danger">Turn Off LED</button>
         </div>
     </div>
+
     <!-- 引入 MQTT 库和 JS 文件 -->
     <script src="js/mqtt.min.js"></script>
     <script src="js/main.js"></script>
